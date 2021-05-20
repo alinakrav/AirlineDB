@@ -1,0 +1,296 @@
+:root {
+    --main-color: rgb(89 228 177);
+    --label-color: #019871;
+
+}
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 10%;
+    overflow-y:scroll;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-transform: uppercase;
+    text-shadow: 0 4px 10px rgba(198, 255, 144, 0.849);
+    margin: 7% 6% 7% 6%;
+}
+
+#menupage {
+    background-image: linear-gradient(70deg, rgb(214 249 76), var(--main-color), rgb(0 255 162))
+}
+
+button,
+form {
+    color: white;
+    width: 80%;
+    border: 4px solid white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    overflow: hidden;
+    justify-content:center;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+button:focus, input:focus, select:focus {
+    outline: 0;
+}
+
+button {
+    font-size: large;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: none;
+    display: block;
+    height: 70px;
+}
+
+button:nth-of-type(n+2) {
+    border-top: 0;
+}
+
+button:not(.noHover):hover {
+    background-color: black !important;
+}
+button:hover {
+    transition: 0.3s;
+    text-shadow: 0 0 15px white;
+}
+
+label {
+    color: var(--label-color);
+    font-weight: bold;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+.labelinput {
+    white-space: nowrap;
+}
+
+.flex {
+    display: inline-block;
+}
+
+#form2 .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#form4 .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.row3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.row4 {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+}
+
+.row3:not(.submit) {
+    padding-bottom: 10px;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 25px;
+}
+
+.column3 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.column4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 25px;
+}
+
+.column4 select {
+    width: fit-content;
+}
+
+.submit {
+    flex-wrap: wrap;
+    font-weight:bold;
+    background-color: white;
+    color:var(--main-color);
+    align-content: center;
+    height:fit-content;
+}
+
+#form3 .submit {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+input:not(.nostyle),
+select {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+input[type=submit]:hover {
+    box-shadow: 0 0 30px white;
+}
+input,
+select {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    border: 2px solid white;
+    color: white;
+}
+input:not(.submit) {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+#form2 input,
+#form2 select {
+    width: 100px;
+}
+#form3 input:not(.nostyle),
+#form3 select {
+    width: 200px;
+}
+
+#form4select1 {
+    width: 200px;
+}
+#form4 .submit {
+    width: 100px;
+}
+#form5 .submit {
+    width: 100px;
+}
+
+#msgPosition {
+    width: 100%;
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+@keyframes slide {
+    0% {opacity: 0; right: 200px;}
+    15% {opacity: 1; right: 0; left: 0}
+    80% {opacity: 1; right: 0; left: 0}
+    100% {opacity: 0; left: 200px;}
+}
+
+@keyframes slide2 {
+    0% {opacity: 0; right: 300px;}
+    15% {opacity: 1; right: 0; left: 0}
+    80% {opacity: 1; right: 0; left: 0}
+    100% {opacity: 0; left: 200px;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1}
+}
+
+#newFlightMsg:not(.noSubmit),
+#updateMsg:not(.noSubmit) {
+    animation: slide 3s;
+}
+
+.msg {
+    opacity: 0;
+    position:absolute;
+    top: -67px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 45px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.329);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.788);
+}
+.msg > h3 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    color: white;
+    text-shadow: 0 0 15px white;
+}
+
+
+.formMsg {
+    position: absolute;
+    margin: 0 auto;
+    width: fit-content;
+    height: 45px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    width: fit-content;
+    height: min-content;
+}
+.formMsg > h3 {
+    display: none;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: #18be95;
+    text-shadow: 0 0 8px white;
+    background-color: rgba(255, 255, 255, 0.452);
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.61);
+    margin: 0;
+}
+
+.formMsg:not(.noSubmit) {
+    position: relative;
+    animation: fadeIn 1.2s;
+}
+.formMsg:not(.noSubmit) > h3 {
+    display: block;
+    animation: fadeIn 1.2s;
+}

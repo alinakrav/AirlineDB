@@ -1,0 +1,40 @@
+html, body {
+    min-height: 100%;
+}
+body {
+    background-image: url('../img/plane.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size:cover;
+    background-position:center;
+    background-color: pink;
+}
+
+#titleBox {
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+    background-color: white; 
+    height: max-content; 
+    width: 400px; 
+    margin: auto; 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+}
+
+#titleBox:hover {
+    transition: 0.7s;
+    background-color: rgba(255, 255, 255, 0.801);
+}
+#titleBox:hover h1 {
+    transition: 0.3s;
+    color:rgb(197, 186, 185);
+    text-shadow: 0 0 10px rgb(197, 186, 185);
+}
+h1 {
+    text-shadow: 0 0 10px #c7bdb9;
+    color: #c7bdb9; 
+    font-family:Arial; 
+    text-align: center; 
+    font-size: 90px;
+}
