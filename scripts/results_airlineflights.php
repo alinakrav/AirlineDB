@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <title>Search results</title>
-    <link rel="stylesheet" href="/AirlineDB/styles/style_results.css">
+    <link rel="stylesheet" href="/styles/style_results.css">
 </head>
 
 <body>
     <?php
     include 'connectdb.php';
     ?>
-    <button onclick='window.location = "/AirlineDB/menu.php"'>Go Back</button>
+    <button onclick='window.location = "/menu.php"'>Go Back</button>
         <?php
         $airlineCode = $_POST['airlinecode'];
         $day = $_POST['day'];
