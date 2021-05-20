@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Airline</title>
+    <title>AirlineDB</title>
     <script src='scripts/src.js'></script>
     <link rel="stylesheet" href="styles/style_menu.css">
 </head>
